@@ -4,7 +4,7 @@ This is an extension to an extension of an extension of parsedown - specifically
 ## Extension to extension to extension?
 OK so I started with [parsedown](https://github.com/erusev/parsedown).
 
-Really liked it but I had this little thing I wanted to change: I wanted to make it so I could decide if hyperlinks to exteral sites would have _blank target so they'd open in a new window  or so that all links did
+Really liked it but I had this little thing I wanted to change: I wanted to make it so I could decide if hyperlinks to exteral sites would have \_blank target so they'd open in a new window  or so that all links did
 
 I ended up forking parsedown and my code worked and it was fine for my needs
 
@@ -29,6 +29,6 @@ Sorry for the hot mess
 I'm making this public as a way to give back
 
 ## Thank you  to 
-[Emanuil Rusev ](https://github.com/erusev/) for parsedown and parsedown-extra
+[Emanuil Rusev](https://github.com/erusev/) for parsedown and parsedown-extra
 and to [KEINOS](https://github.com/KEINOS) for parsedown-extension_table-of-contents
 
