@@ -55,13 +55,13 @@ Note that you want to put {\#toctop} on the last header line you want to HIDE fr
 [toc] 
 
 ## Some head
-- fnord
-- foo
+- [external link](https://github.com)
+- [internal link](#toctop)
 
 ## some other head
 ### Some subhead
 - bar
--baz
+- baz
 ```
 
 ### Use Parsedown
