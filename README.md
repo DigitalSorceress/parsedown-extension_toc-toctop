@@ -117,16 +117,15 @@ right and all this patching my changes directly in was really not The Way.
 So, I rolled back to plain jane copies off the current github versions and made 
 this new extension.
 
-If /when KEINOS adds the feature directly to their addon I'll remove that part 
-but I'll leave this extension to their extenion so I can patch in my other 
-desired fixs (the extLinksInNewWindow / allLinksInNewWindow) feature I really 
-wanted.
+If /when KEINOS adds the feature directly to their addon I'll remove that part but I'll leave this extension to their extenion so I can patch in my other desired fixs (the extLinksInNewWindow / allLinksInNewWindow) feature I really wanted.
 
 Sorry for the hot mess
 
 I'm making this public as a way to give back
 
 ## Thank you  to 
+
 [Emanuil Rusev](https://github.com/erusev/) for parsedown and parsedown-extra
+
 and to [KEINOS](https://github.com/KEINOS) for parsedown-extension_table-of-contents
 
