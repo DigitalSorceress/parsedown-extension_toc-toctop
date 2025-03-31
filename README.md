@@ -30,7 +30,7 @@ require_once('parsedown-extension_toc-toctop/ParsedownExtraTocTocTop.php');
 $Parsedown = new ParsedownExtraTocTocTop();
 
 // Enables the delay toc feature and sets the id that triggers it
-$Parsedown->setEnableDelayToc(true, 'toctop');
+$Parsedown->setDelayedToc(true, 'toctop');
 
 // causes links to external sites (http[s]://example.com) 
 // to have _blank target so they open in new
@@ -72,7 +72,7 @@ Now taht you have done all that you can read your file and parse the MD into HTM
 $mdText = file_get_contents('target.md');
 
 // This gets the html text from parsing the file
-$htmlText = $parser->text($mdText);
+$htmlText = $Parsedown->text($mdText);
 
 // If you want to just dump it to output echo it...
 echo $htmlText;
