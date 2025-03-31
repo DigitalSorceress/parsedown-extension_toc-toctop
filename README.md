@@ -1,6 +1,70 @@
 # parsedown-extension_toc-toctop
 This is an extension to an extension of an extension of parsedown - specifically to [parsedown-extension_table-of-contents](https://github.com/KEINOS/parsedown-extension_table-of-contents) 
 
+## Installation, Dependencies and Misc
+This is an extension to [parsedown-extension_table-of-contents](https://github.com/KEINOS/parsedown-extension_table-of-contents) which is itself an extension to [Markdown-extra](https://michelf.ca/projects/php-markdown/extra/) which is an extension to [parsedown](https://github.com/erusev/parsedown)
+
+So you need to ensure you have each of these. I don't have this set up for composer etc, so this is going to be the "raw" install assuming you go to the relevant git hubs and grab their main PHP files
+### get the files
+```bash
+wget https://github.com/erusev/parsedown/blob/master/Parsedown.php
+wget https://github.com/erusev/parsedown-extra/blob/master/ParsedownExtra.php
+wget https://github.com/KEINOS/parsedown-extension_table-of-contents/blob/master/Extension.php
+wget https://github.com/DigitalSorceress/parsedown-extension_toc-toctop/blob/main/ParsedownExtraTocTocTop.php
+```
+
+### Include each of these in your php 
+```php
+<?php
+require_once('Parsedown.php');
+require_once('ParsedownExtra.php');
+require_once('Extension.php');
+require_once('ParsedownExtraTocTocTop.php');
+?>
+```
+
+### In your php to instantiate and use
+```php
+<?php
+
+$Parsedown = new ParsedownExtraTocTocTop();
+
+// Enables the delay toc feature and sets the id that triggers it
+$Parsedown->setEnableDelayToc(true, 'toctop');
+
+// causes links to external sites (http[s]://example.com) to have _blank target so they open in new
+$Parsedown->setExtLinksInNewWindow(true);
+
+// if you prefer ALL links that way
+// $Parsedown->setExtLinksInNewWindow(true);
+
+// if you don't want this feature leave it unset
+?>
+```
+
+## finally put some ids /tags into your markdown
+Note that you want to put {\#toctop} on the last header line you want to HIDE from TOC
+- It must be on a #, ##, ###, #####, #####, or ###### line
+- The TOC will ignore all heads up to and including the one that has TocTop
+```markdown
+# Title
+### yyyy mon dd
+
+## Table of Contents {#toctop}
+[toc] 
+
+## Some head
+- fnord
+- foo
+
+## some other head
+### Some subhead
+- bar
+-baz
+```
+
+
+
 ## Extension to extension to extension?
 OK so I started with [parsedown](https://github.com/erusev/parsedown).
 

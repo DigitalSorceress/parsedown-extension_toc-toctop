@@ -14,7 +14,7 @@
  * @license     MIT: 
 */
 
-class ParsedownExtraTocDigit extends ParsedownToC
+class ParsedownExtraTocTocTop extends ParsedownToC
 {
     /**
      * ------------------------------------------------------------------------
