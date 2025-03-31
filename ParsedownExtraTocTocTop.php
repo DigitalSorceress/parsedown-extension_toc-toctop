@@ -158,7 +158,7 @@ class ParsedownExtraTocTocTop extends ParsedownToC
         // DynamicParent is Toc's way of either doing parsedown or parsedown extended
         $Link = DynamicParent::inlineLink($Excerpt);
         
-        $url = $Link['element']['attributes']['href'];
+        $url = $Link['element']['attributes']['href'] ?? null;
         if ($url != null) {
             $target = '_self';
 
@@ -189,7 +189,7 @@ class ParsedownExtraTocTocTop extends ParsedownToC
     {
         $Inline = DynamicParent::inlineUrl($Excerpt);
 
-        $url = $Inline['element']['attributes']['href'];
+        $url = $Inline['element']['attributes']['href'] ?? null;
         if ($url != null) {
             $target = '_self';
 
@@ -219,7 +219,7 @@ class ParsedownExtraTocTocTop extends ParsedownToC
     {
         $tagArray = DynamicParent::inlineUrlTag($Excerpt);
 
-        $url = $tagArray['element']['attributes']['href'];
+        $url = $tagArray['element']['attributes']['href'] ?? null;
         if ($url != null) {
             $target = '_self';
 
