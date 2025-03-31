@@ -6,12 +6,7 @@ This is an extension to [parsedown-extension_table-of-contents](https://github.c
 
 So you need to ensure you have each of these. I don't have this set up for composer etc, so this is going to be the "raw" install assuming you go to the relevant git hubs and grab their main PHP files
 ### get the files
-```bash
-wget https://github.com/erusev/parsedown/blob/master/Parsedown.php
-wget https://github.com/erusev/parsedown-extra/blob/master/ParsedownExtra.php
-wget https://github.com/KEINOS/parsedown-extension_table-of-contents/blob/master/Extension.php
-wget https://github.com/DigitalSorceress/parsedown-extension_toc-toctop/blob/main/ParsedownExtraTocTocTop.php
-```
+... work in progress here... 
 
 ### Include each of these in your php 
 ```php
