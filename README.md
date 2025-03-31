@@ -37,7 +37,8 @@ $Parsedown = new ParsedownExtraTocTocTop();
 // Enables the delay toc feature and sets the id that triggers it
 $Parsedown->setEnableDelayToc(true, 'toctop');
 
-// causes links to external sites (http[s]://example.com) to have _blank target so they open in new
+// causes links to external sites (http[s]://example.com) 
+// to have _blank target so they open in new
 $Parsedown->setExtLinksInNewWindow(true);
 
 // if you prefer ALL links that way
