@@ -1,20 +1,30 @@
 # parsedown-extension_toc-toctop
-This is an extension to an extension of an extension of parsedown - specifically to [parsedown-extension_table-of-contents](https://github.com/KEINOS/parsedown-extension_table-of-contents) 
+This is an extension to an extension of an extension of parsedown. 
+Specifically to [parsedown-extension_table-of-contents](https://github.com/KEINOS/parsedown-extension_table-of-contents).
 
 ## Installation, Dependencies and Misc
-This is an extension to [parsedown-extension_table-of-contents](https://github.com/KEINOS/parsedown-extension_table-of-contents) which is itself an extension to [Markdown-extra](https://michelf.ca/projects/php-markdown/extra/) which is an extension to [parsedown](https://github.com/erusev/parsedown)
+This is an extension to [parsedown-extension_table-of-contents](https://github.com/KEINOS/parsedown-extension_table-of-contents) 
+which is itself an extension to [Markdown-extra](https://michelf.ca/projects/php-markdown/extra/) 
+which is an extension to [parsedown](https://github.com/erusev/parsedown)
 
-So you need to ensure you have each of these. I don't have this set up for composer etc, so this is going to be the "raw" install assuming you go to the relevant git hubs and grab their main PHP files
+So you need to ensure you have each of these. I don't have this set up for 
+composer etc, so this is going to be the "raw" install assuming you go to the 
+relevant git hubs and grab their main PHP files
 ### get the files
-... work in progress here... 
+```bash
+git clone https://github.com/erusev/parsedown.git
+git clone https://github.com/erusev/parsedown-extra.git
+git clone https://github.com/KEINOS/parsedown-extension_table-of-contents.git
+git clone https://github.com/DigitalSorceress/parsedown-extension_toc-toctop.git
+```
 
 ### Include each of these in your php 
 ```php
 <?php
-require_once('Parsedown.php');
-require_once('ParsedownExtra.php');
-require_once('Extension.php');
-require_once('ParsedownExtraTocTocTop.php');
+require_once('parsedown/Parsedown.php');
+require_once('parsedown-extra/ParsedownExtra.php');
+require_once('parsedown-extension_table-of-contents/Extension.php');
+require_once('parsedown-extension_toc-toctop/ParsedownExtraTocTocTop.php');
 ?>
 ```
 
@@ -37,7 +47,7 @@ $Parsedown->setExtLinksInNewWindow(true);
 ?>
 ```
 
-## finally put some ids /tags into your markdown
+### finally put some ids /tags into your markdown
 Note that you want to put {\#toctop} on the last header line you want to HIDE from TOC
 - It must be on a #, ##, ###, #####, #####, or ###### line
 - The TOC will ignore all heads up to and including the one that has TocTop
@@ -58,6 +68,19 @@ Note that you want to put {\#toctop} on the last header line you want to HIDE fr
 -baz
 ```
 
+### Use Parsedown
+Now taht you have done all that you can read your file and parse the MD into HTML
+
+```php
+// in this case we'll assume you ahve your markdown in a file named target.md
+$mdText = file_get_contents('target.md');
+
+// This gets the html text from parsing the file
+$htmlText = $parser->text($mdText);
+
+// If you want to just dump it to output echo it...
+echo $htmlText;
+```
 
 
 ## Extension to extension to extension?
