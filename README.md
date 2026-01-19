@@ -2,7 +2,7 @@
 This is an extension to an extension of an extension of parsedown. Specifically to [parsedown-extension_table-of-contents](https://github.com/KEINOS/parsedown-extension_table-of-contents).
 
 ## Installation, Dependencies and Misc
-This is an extension to [parsedown-extension_table-of-contents](https://github.com/KEINOS/parsedown-extension_table-of-contents) which is itself an extension to [parsedown-extra](hhttps://github.com/erusev/parsedown-extra) which is an extension to [parsedown](https://github.com/erusev/parsedown)
+This is an extension to [parsedown-extension_table-of-contents](https://github.com/KEINOS/parsedown-extension_table-of-contents) which is itself an extension to [parsedown-extra](https://github.com/erusev/parsedown-extra) which is an extension to [parsedown](https://github.com/erusev/parsedown)
 
 So you need to ensure you have each of these. I don't have this set up for composer etc, so this is going to be the "raw" install assuming you go to the relevant git hubs and grab their main PHP files
 ### get the files
