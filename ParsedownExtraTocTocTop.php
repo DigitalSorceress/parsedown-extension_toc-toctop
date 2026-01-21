@@ -21,7 +21,7 @@ class ParsedownExtraTocTocTop extends ParsedownToC
      *  Constants.
      * ------------------------------------------------------------------------
      */
-    const version = '1.0.1'; 
+    const VERSION = '1.0.2'; 
 	const VERSION_PARSEDOWN_TOC_REQUIRED = '1.1.2'; // tested against 1.1.2 and 1.4.0
 
     protected $tocTopId = 'toctop';  
