@@ -1,6 +1,11 @@
 # parsedown-extension_toc-toctop
 This is an extension to an extension of an extension of parsedown. Specifically to [parsedown-extension_table-of-contents](https://github.com/KEINOS/parsedown-extension_table-of-contents).
 
+## UPDATE 2026-01-21
+I haven't really touched the files I was using for parsedown cuz they were just working... Until recently when I started setting up a new dev / test environment for some updates and began using PHP8.5
+
+I ran into a bunch of deprecation warnings and such. I addressed them as I went but when I looked I noticed that parsedown-extension_table-of-contents has undergone a rather large refactoring. I had been working with a version 1.1.2, and my code still works with 1.4.0 but I found a small bug where I was not getting the correct version. This is now fixed
+
 ## Installation, Dependencies and Misc
 This is an extension to [parsedown-extension_table-of-contents](https://github.com/KEINOS/parsedown-extension_table-of-contents) which is itself an extension to [parsedown-extra](https://github.com/erusev/parsedown-extra) which is an extension to [parsedown](https://github.com/erusev/parsedown)
 
