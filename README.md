@@ -28,6 +28,9 @@ require_once('parsedown-extension_toc-toctop/ParsedownExtraTocTocTop.php');
 ?>
 ```
 
+> [!note] NOTE
+> the file for parsedown-extension_table-of-contents changed to "Extension.php"
+
 ### In your php to instantiate and use
 ```php
 <?php
