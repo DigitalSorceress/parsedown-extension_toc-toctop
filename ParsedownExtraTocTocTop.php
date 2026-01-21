@@ -22,7 +22,7 @@ class ParsedownExtraTocTocTop extends ParsedownToC
      * ------------------------------------------------------------------------
      */
     const version = '1.0.1'; 
-	const VERSION_PARSEDOWN_TOC_REQUIRED = '1.1.2';
+	const VERSION_PARSEDOWN_TOC_REQUIRED = '1.1.2'; // tested against 1.1.2 and 1.4.0
 
     protected $tocTopId = 'toctop';  
     protected $tocReached = false; // set this to true to prevent skipping header items before TOC
@@ -33,7 +33,7 @@ class ParsedownExtraTocTocTop extends ParsedownToC
      */
     public function __construct()
     {
-        if (version_compare(\ParsedownToC::version, self::VERSION_PARSEDOWN_TOC_REQUIRED) < 0) {
+        if (version_compare( parent::VERSION, self::VERSION_PARSEDOWN_TOC_REQUIRED) < 0) {
             $msg_error  = 'Version Error.' . PHP_EOL;
             $msg_error .= '  ParsedownExtraTocDigit Extension requires a later version of ParsedownToC.' . PHP_EOL;
             $msg_error .= '  - Current version : ' . \ParsedownToC::version . PHP_EOL;
